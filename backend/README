@@ -11,7 +11,7 @@ FUNCTIONALITY:
     [X] Stores that user is now loggied in w/JWT to local storage
     [X] Initializes that user as logged in upon refresh usign AuthContext
 
-[X] User can enter profile information based on RBAC
+[ ] User can enter profile information based on RBAC
 
 [X] Application is protected:
     [X] Passwords are salted and hashed before being stored
@@ -20,6 +20,10 @@ FUNCTIONALITY:
     [X] All frontend routes automatically redirect the user
         [X] Redirects based on if the user is logged in
         [X] Redirects based on the role of the user (RBAC)
+
+[ ] Application CORS compatible:
+    [X] Development build using PROXY in frontend/package.json to PORT
+    [ ] CORS required and implemented
 
 [X] User properly modelled and stored in the database:
     [X] email         : global
@@ -40,7 +44,7 @@ FUNCTIONALITY:
     [X] content
     [X] completed
 
-[~] Food Bank Users have current functionality:
+[X] Food Bank Users have current functionality:
     [X] User can see all orders not marked as complete
     [X] User can see all orders marked as complete
     [X] User can mark order as complete
@@ -50,9 +54,8 @@ FUNCTIONALITY:
     [X] User can update their profile
 
 [X] Consumer Users have current functionality:
-    [X] User can see a map of food sources
-        [X] User can toggle that map
-        [X] User can see transit options
+    [~] User can see a map of food sources
+        [ ] User can toggle that map
         [X] User can see subscribed banks
     [X] User can see orders from banks they have subscribed to
     [X] User can see banks they are subscribed to
