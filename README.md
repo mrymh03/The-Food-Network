@@ -1,64 +1,40 @@
-FUNCTIONALITY:
-[X] User can register an account:
-    [X] User can select the role for that account
-    [X] Food Bank users need to input everything on register
-    [X] Consumer users only need to input email, password, role
-    [X] Stores that user is now logged in w/JWT to local storage
-    [X] Initializes that user as logged in upon refresh usign AuthContext
+# The Food Network
 
-[X] User can log into an account:
-    [X] User inputs email, password, role
-    [X] Stores that user is now loggied in w/JWT to local storage
-    [X] Initializes that user as logged in upon refresh usign AuthContext
+The Food Network is a full-stack MERN (MongoDB, Express, React, Node.js) web application made to centralize food availability information for consumers, with a special focus on supporting food banks and pantries. It ensures that users are informed in real-time about newly available food stock, helping local food services like the University of Arizona’s Campus Pantry and Tucson-area food banks communicate more effectively with the communities they serve.
 
-[X] User can enter profile information based on RBAC
+## **Motivation**
 
-[X] Application is protected:
-    [X] Passwords are salted and hashed before being stored
-    [X] .env file is in gitignore and stores the SECRET
-    [X] All backend routes require a JWT to perform any action
-    [X] All frontend routes automatically redirect the user
-        [X] Redirects based on if the user is logged in
-        [X] Redirects based on the role of the user (RBAC)
+Food banks often struggle to update consumers on what’s available and updates are scattered across different social media accounts and websites. This application provides a central hub where consumers can:
 
-[X] User properly modelled and stored in the database:
-    [X] email         : global
-    [X] password      : global
-    [X] role          : global
-    [X] subscriptions : global
-    [X] title         : fb req, global op
-    [X] address       : fb req, global op
-    [X] city          : fb req, global op
-    [X] state         : fb req, global op
-    [X] zip           : fb req, global op
-    [X] foodlist      : fb req, global op
-    [X] desc          : fb req, global op
+- Discover food services nearby
+- Subscribe to food banks they rely on
+- Receive real-time updates when food is added or delivered
 
-[X] Order properly modelled and stored in the database:
-    [X] bank_id
-    [X] date
-    [X] content
-    [X] completed
+At the same time, food bank administrators can easily manage their orders and notify subscribers instantly without redundant communication steps.
 
-[~] Food Bank Users have current functionality:
-    [X] User can see all orders not marked as complete
-    [X] User can see all orders marked as complete
-    [X] User can mark order as complete
-    [X] User can delete order
-    [X] User can create order
-        [X] Creation of order notifies subscribed users via email through DB trigger
-    [X] User can update their profile
+## **Features**
 
-[X] Consumer Users have current functionality:
-    [X] User can see a map of food sources
-        [X] User can toggle that map
-        [X] User can see transit options
-        [X] User can see subscribed banks
-    [X] User can see orders from banks they have subscribed to
-    [X] User can see banks they are subscribed to
-        [X] User can unsubscribe from banks
-    [X] User can search for banks
-        [X] User can search based on item
-        [X] User can search based on multiple items
-        [X] User can search based on location
-        [X] User can subscribe to a bank
+Authentication & Role-Based Access (RBAC)
+- Register/Login with email, password, and user role (`Consumer` or `Food Bank`)
+- JWT stored in local storage for persistent sessions
+- AuthContext reinitializes login status on refresh
+- Passwords are salted & hashed
+- Protected backend API with token-based access
+
+Food Bank User Capabilities
+- View active and completed orders
+- Create, update, or delete orders
+- Automatically notify subscribed consumers via email on new or updated orders
+- Update profile information
+
+Consumer User Capabilities
+- Search for food banks by name, item(s), or location
+- Subscribe/unsubscribe to banks
+- View a map of food sources with transit info
+- View and filter all orders from subscribed banks
+
+## **Acknowledgments**
+This project was created as a collaborative team effort in December 2024 as part of coursework for CSC 436 at the University of Arizona.
+
+
+
